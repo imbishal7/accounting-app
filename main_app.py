@@ -34,7 +34,10 @@ class MainApp(Tk):
 if __name__ == '__main__':
     app = MainApp()
     app.title(fcompany_name)
-    app.state('zoomed')
+    try:
+        app.state('zoomed')
+    except:
+        pass
     try:
         app.iconbitmap('logo.ico')
     except:
