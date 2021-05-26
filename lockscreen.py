@@ -23,9 +23,9 @@ login_bg= '#70d7ff'
 
 partion_names = fcompany_name.split(' ')
 if (len(partion_names)>3) and (len(partion_names)<=5):
-    company_name = ' '.join(partion_names[:2]) + "\n"+' '.join(partion_names[2:])
+    fcompany_name = ' '.join(partion_names[:2]) + "\n"+' '.join(partion_names[2:])
 elif len(partion_names)>5:
-    company_name = ' '.join(partion_names[:3])+ '\n'+ ' '.join(partion_names[3:])
+    fcompany_name = ' '.join(partion_names[:3])+ '\n'+ ' '.join(partion_names[3:])
 
 
 # ----------Lock Screen---------------#
@@ -41,7 +41,7 @@ class LockScreen(Frame):
         self.grid_rowconfigure(5, weight=1)
         self.grid_rowconfigure(3, weight=1)
 
-        head = Label(self, text=company_name, font=huge_font, fg='#ffb536', bg=background)
+        head = Label(self, text=fcompany_name, font=huge_font, fg='#ffb536', bg=background)
         head.grid(row=2, column=2, sticky=NSEW,columnspan=3)
 
         date_frame = Frame(self, height=350, width=350, bg=date_bg, padx=40, pady=40, relief=GROOVE, bd=5)
